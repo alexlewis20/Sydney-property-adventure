@@ -1,3 +1,6 @@
+import json
+import requests
+
 api_key = 'AIzaSyCJ9wJjgzrnrtOnZ0Cbl3Wjzwy5szKv4Zg'
 base_url = 'https://maps.googleapis.com/maps/api/geocode/json'
 
@@ -22,4 +25,21 @@ def create_url(address):
     return geocode_url
 
 
-create_url("85 ALBION STREET, ANNANDALE NSW 2038")
+def geocode(address):
+    """Return geocode information from google maps api."""
+    request_url = create_url(address)
+    print request_url
+    json_data = requests.get(request_url)
+    data = json.loads(json_data.text)
+    location = data["results"][0]["geometry"]["location"]
+    council = data["results"][0]["address_components"][3]["short_name"]
+    results = {"lat": location["lat"],
+               "lng": location["lng"],
+               "council": council
+               }
+    print results
+    return results
+
+
+# test
+geocode("85 ALBION STREET, ANNANDALE NSW 2038")

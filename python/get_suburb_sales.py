@@ -28,7 +28,9 @@ def save_csv(suburb, postcode):
     return save_path
 
 
-with open("data/suburbs_list.csv") as csvfile:
+with open("reference/suburbs_list.csv") as csvfile:
     suburb_list = csv.reader(csvfile, delimiter=",")
     for row in suburb_list:
         print save_csv(row[0], row[1])
+print("Complete")
+csvfile.close()

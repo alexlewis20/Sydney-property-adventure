@@ -9,7 +9,6 @@ def prepare_address(address):
     """Convert address string into url friendly string."""
     url_address = address.split(' ')
     url_address = "+".join(url_address)
-    print(url_address)
     return url_address
 
 
@@ -21,14 +20,12 @@ def create_url(address):
     geocode_url = '{url}?{param_1}&{param_2}'.format(url=url,
                                                      param_1=param_1,
                                                      param_2=param_2)
-    print(geocode_url)
     return geocode_url
 
 
 def geocode(address):
     """Return geocode json from google maps api as dictionary."""
     request_url = create_url(address)
-    print request_url
     json_data = requests.get(request_url)
     data = json.loads(json_data.text)
     return data
@@ -44,7 +41,3 @@ def geocode(address):
     print results
     return results
     """
-
-
-# test
-geocode("85 ALBION STREET, ANNANDALE NSW 2038")

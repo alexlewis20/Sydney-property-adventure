@@ -26,10 +26,14 @@ def create_url(address):
 
 
 def geocode(address):
-    """Return geocode information from google maps api."""
+    """Return geocode json from google maps api as dictionary."""
     request_url = create_url(address)
     print request_url
     json_data = requests.get(request_url)
+    data = json.loads(json_data.text)
+    return data
+    """"
+    # working geocode
     data = json.loads(json_data.text)
     location = data["results"][0]["geometry"]["location"]
     council = data["results"][0]["address_components"][3]["short_name"]
@@ -39,6 +43,7 @@ def geocode(address):
                }
     print results
     return results
+    """
 
 
 # test

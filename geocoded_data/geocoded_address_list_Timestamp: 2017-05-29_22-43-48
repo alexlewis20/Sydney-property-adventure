@@ -1,0 +1,3 @@
+,address_type,council_short,formatted_address,g_postcode,g_suburb,gmaps_id,lat,lng,location_type,street_name,street_number,view NE lat,view NE lng,view SW lat,view SW lng,street_address
+9,premise,Marrickville,"8 Alfred St, St Peters NSW 2044, Australia",2044,St Peters,ChIJlQ1zJVqwEmsRXE2Gbdaoc2c,-33.9153427,151.1731751,ROOFTOP,Alfred St,8,-33.9139937197,151.17452408,-33.9166916803,151.17182612,"8 ALFRED STREET, ST PETERS NSW 2044"
+10,premise,Marrickville,"45 Alfred St, St Peters NSW 2044, Australia",2044,St Peters,ChIJyU7_SlqwEmsRCYO4-2JrG04,-33.9142672,151.1725425,ROOFTOP,Alfred St,45,-33.9129182697,151.17389153,-33.9156162303,151.17119357,"45 ALFRED STREET, ST PETERS NSW 2044"

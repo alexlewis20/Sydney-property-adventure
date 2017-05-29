@@ -54,4 +54,4 @@ print files
 # Process and combine loaded CSVs the save to new file
 sales_data = pd.concat([process_csv(f) for f in files], ignore_index=True)
 sales_data = sales_data.drop_duplicates(subset=["DEALING NUMBER"])
-sales_data.to_csv("sydney_sales_combined.csv")
+sales_data.to_csv("combined_data/sydney_sales_combined.csv")
